@@ -19,8 +19,8 @@ for tuple_element in result:
 # For all of the walked .tsx files found.
 for item in found_tsx_files:
 
-    f_module_css = open(item, "r")
-    f_tsx = open(item[0:-4] + ".module.css", "r")
+    f_module_css = open(item[0:-4] + ".module.css", "r")
+    f_tsx = open(item, "r")
 
     # Read in all CSS class names from .module.css.
     # In the .module.css file, add all ".className {" to a list between the "." and " {" so just record "className"
@@ -72,7 +72,7 @@ for item in found_tsx_files:
         if className not in module_css_classes_set:
             unused_tsx_styles.append(className)
 
-    if len(unused_module_css) != 0 and len(unused_tsx_styles) != 0:
+    if len(unused_module_css) != 0 or len(unused_tsx_styles) != 0:
         print("")
         print(item[len(sys.argv[1]):])
         print("Unused .module.css:")
