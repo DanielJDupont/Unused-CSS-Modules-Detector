@@ -1,0 +1,29 @@
+.wrapper {
+  display: flex;
+}
+
+.container {
+  display: flex;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 500;
+}
+.title:hover {
+  font-size: 30px;
+}
+
+.herringPhoto {
+  height: 200px;
+  width: 200px;
+}
+
+.cheese {
+  font-size: 18px;
+}
+
+.coconutHorse {
+  width: 300px;
+  height: 300px;
+}
