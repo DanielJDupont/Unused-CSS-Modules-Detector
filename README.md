@@ -15,10 +15,10 @@ The pattern of `.tsx` components always being paired with a `.module.css` file a
 
 Tested on Python 3.7.6 with VS Code.
 
-1. In VS Code, simply right click the `.tsx` file you want to check and copy the** full path**, not the relative path.
+1. In VS Code, simply right click the **folder** you want to check and copy the** full path**, not the relative path.
 
 2. Paste the full path as your first argument into the terminal while running this python file: 
-`python index.py /home/dan/Desktop/Unused-CSS-Module-Detector/File.tsx`
+`python index.py /home/dan/Desktop/Unused-CSS-Module-Detector/`
 
 *Note that you will need to have Python installed and able to execute .py files from your terminal with this approach. Python environments can be easily changed using the bottom left of VS Code.*
 
@@ -35,10 +35,10 @@ Note that you must only provide the full path of the `.tsx` file.
 Do not provide the full path of the `.module.css` file as this program only expects the `.tsx` file.
 
 ### More Examples of How to Use the Command
-`python index.py /home/dan/Desktop/Unused-CSS-Module-Detector/Profile.tsx`
+`python index.py /home/dan/Desktop/interview_py/components`
 
-`python index.py /home/dan/Desktop/Unused-CSS-Module-Detector/index.tsx`
+`python index.py components/codeEditor`
 
-`python index.py /home/dan/Desktop/interview_py/components/navbar/MobileDrawer.tsx`
+`python index.py /home/dan/Desktop/interview_py/components/navbar`
 
-`python index.py /home/dan/Desktop/interview_py/components/codeEditor/Editor/index.tsx`
+`python index.py /home/dan/Desktop/interview_py/components/home`
