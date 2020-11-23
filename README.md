@@ -3,7 +3,8 @@
 
 ### What Does This Do?
 
-- Checks all pairs of `.tsx` and `.module.css` files for any missing or unused CSS between them and tells you what exactly is missing or unused in a provided folder and all of its subfolders.
+- Checks all pairs of `.tsx` and `.module.css` files for any missing or unused CSS between them and tells you what exactly is missing or unused.
+- Checks the provided folder and all subfolders.
 - Tells you if any `.tsx` file is missing its corresponding `.module.css` file.
 - Informs you if there is any difference in the spelling of the `.tsx` and its corresponding `.module.css` file.
 
