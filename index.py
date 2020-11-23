@@ -27,7 +27,7 @@ for item in found_tsx_files:
     module_css_classes = []
 
     for line in f_module_css:
-        if line[0] == '.' and ":" not in line and ">" not in line:
+        if line[0] == '.' and ":" not in line and ">" not in line and 'iframe' not in line:
             className = line[1:-3]
             module_css_classes.append(className)
 
@@ -38,18 +38,22 @@ for item in found_tsx_files:
     tsx_css_classes = []
 
     for line in f_tsx:
-        if "className={styles." in line:
+        if "styles." in line:
             # Get the exact position on the line of where "styles={" is located.
-            stylesIndex = line.index("className={styles.")
+            stylesIndex = line.index("styles.")
             # Get the exact position immediately to the right of the brace, which is where the CSS class name is located.
-            classNameIndex = stylesIndex + len("className={styles.")
+            classNameIndex = stylesIndex + len("styles.")
 
             # Iterate until we encounter a closing brace, which is where the end of the class name is.
             index = classNameIndex
             currentCharacter = line[classNameIndex]
-            while currentCharacter is not "}":
+            while currentCharacter not in ["}", ';', ' ', '\n']:
                 index += 1
-                currentCharacter = line[index]
+                try:
+                    currentCharacter = line[index]
+                except:
+                    print("something is wrong")
+
             classNameIndexEnd = index
 
             className = line[classNameIndex: classNameIndexEnd]
