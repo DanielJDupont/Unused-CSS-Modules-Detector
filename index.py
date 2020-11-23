@@ -37,11 +37,10 @@ for line in f_tsx:
         tsx_css_classes.append(className)
 
 
-# For debugging purposes.
-# module_css_classes_set = set(module_css_classes)
+module_css_classes_set = set(module_css_classes)
 # print(module_css_classes_set)
 
-# tsx_css_classes_set = set(tsx_css_classes)
+tsx_css_classes_set = set(tsx_css_classes)
 # print(tsx_css_classes_set)
 
 
