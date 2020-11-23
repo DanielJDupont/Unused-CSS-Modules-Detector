@@ -4,11 +4,9 @@
 
 I enjoy using a pattern of using pairs of `.module.css` and `.tsx` files in React. This approach separates styling from logic very clearly, especially as I enjoy writing and having control over all of my own CSS and keeping the use of styling libraries to an absolute minimum. 
 
-I typically write relatively large amounts of CSS so I have found this system to be crucial for myself as placing my CSS into .tsx files would overwhelm them quickly. I always create a .module.css file for every `.tsx` file and I consider breaking down and rewriting components if they exceed ~120 lines. I never use a single `.module.css` file with multiple components as I strive to also keep my `.module.css` files as small as possible.
+I typically write relatively large amounts of CSS so I have found this system to be crucial for myself as placing my CSS into `.tsx` files would overwhelm them quickly. I always create a `.module.css` file for every `.tsx` file and I consider breaking down and rewriting components if they exceed ~120 lines. I never use a single `.module.css` file with multiple components as I strive to also keep my `.module.css` files as small as possible.
 
-
-
-The cost of having pairs of files is neglibile in the file-folder structure as long as the files are named the same and as long as groups of tightly coupled components are placed within their own folders.
+The cost of having pairs of files is neglibile in the file-folder structure as long as the files are named the same. It is important that groups of tightly coupled components are grouped together their own folders.
 
 The pattern of `.tsx` components always being paired with a `.module.css` file also makes it far more clear when a `.ts` file is present.
 
