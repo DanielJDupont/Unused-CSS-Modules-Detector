@@ -36,6 +36,9 @@ Do not provide the full path of the `.module.css` file as this program only expe
 
 ### More Examples of How to Use the Command
 `python index.py /home/dan/Desktop/Unused-CSS-Module-Detector/Profile.tsx`
+
 `python index.py /home/dan/Desktop/Unused-CSS-Module-Detector/index.tsx`
+
 `python index.py /home/dan/Desktop/interview_py/components/navbar/MobileDrawer.tsx`
+
 `python index.py /home/dan/Desktop/interview_py/components/codeEditor/Editor/index.tsx`
