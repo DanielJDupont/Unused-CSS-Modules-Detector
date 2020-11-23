@@ -8,6 +8,11 @@
 - Tells you if any `.tsx` file is missing its corresponding `.module.css` file.
 - Informs you if there is any difference in the spelling of the `.tsx` and its corresponding `.module.css` file.
 
+### Who Uses It?
+
+This is primarily used by Interview Py to help enforce a specific file-folder structure and to check for any unused CSS.
+
+
 ### Rational for Using Pairs of .module.css and .tsx Files for Components
 
 I enjoy using a pattern of using pairs of `.module.css` and `.tsx` files in React. This approach separates styling from logic very clearly, especially as I enjoy writing and having control over all of my own CSS and keeping the use of styling libraries to an absolute minimum. 
