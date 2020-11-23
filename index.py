@@ -11,7 +11,7 @@ f_tsx = open("{}".format(str(sys.argv[1])), "r")
 # In the .module.css file, add all ".className {" to a list between the "." and " {" so just record "className"
 module_css_classes = []
 for line in f_module_css:
-    if line[0] == '.' and ":" not in line:
+    if line[0] == '.' and ":" not in line and ">" not in line:
         className = line[1:-3]
         module_css_classes.append(className)
 
