@@ -53,7 +53,7 @@ All `.tsx` and `.module.css` files will be automatically checked within the fold
 
 `python index.py /home/dan/Desktop/interview_py/components`
 
-`python index.py components/codeEditor`
+`python index.py /home/dan/Desktop/interview_py/components/codeEditor`
 
 `python index.py /home/dan/Desktop/interview_py/components/navbar`
 
