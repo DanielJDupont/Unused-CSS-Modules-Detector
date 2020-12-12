@@ -1,5 +1,9 @@
 # Unused CSS Modules Detector
 
+### Next Feature:
+
+- Working on .module.scss support next as I have found a love for nested pseudo-classes and @mixin with @include to cut down on duplicate css significantly and to improve its readability and maintainability. I don't really see a reason to use css without scss.
+
 
 ### What Does This Do?
 
