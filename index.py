@@ -3,7 +3,7 @@ import os
 
 result = os.walk(str(sys.argv[1]))
 
-print("Checking for all unused CSS and styles in the folder: " + sys.argv[1])
+print("Checking for all unused SCSS and styles in the folder: " + sys.argv[1])
 # os.walk returns a list of tuples, with a tuple being an immutable list, a tuple represents the contents of a folder.
 # This is essentially a comprehensive list of all folders and their contents within the selected folder.
 # Each tuple has three indexes, the first index contains the full path of the current folder.
@@ -19,7 +19,7 @@ for tuple_element in result:
 # For all of the walked .tsx files found.
 for item in found_tsx_files:
 
-    f_module_css = open(item[0:-4] + ".module.css", "r")
+    f_module_css = open(item[0:-4] + ".module.scss", "r")
     f_tsx = open(item, "r")
 
     # Read in all CSS class names from .module.css.
@@ -79,7 +79,7 @@ for item in found_tsx_files:
     if len(unused_module_css) != 0 or len(unused_tsx_styles) != 0:
         print("")
         print(item[len(sys.argv[1]):])
-        print("Unused .module.css:")
+        print("Unused .module.scss:")
         print(unused_module_css)
         print("Unused in .tsx:")
         print(unused_tsx_styles)
