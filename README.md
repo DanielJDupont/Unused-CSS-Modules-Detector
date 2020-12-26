@@ -2,7 +2,7 @@
 
 ### Next Feature:
 
-- I have found a love for nested pseudo-classes and @mixin with @include to cut down on duplicate css significantly and to improve its readability and maintainability. I don't really see a reason to use css without scss so all support for .css has been removed and replaced with only supporting .scss.
+- I have found a love for nested pseudo-classes and @mixin with @include to cut down on duplicate css significantly and to improve its readability and maintainability. I don't really see a reason to use css without scss so all support for .css files has been removed and replaced with only supporting .scss files.
 
 
 ### What Does This Do?
