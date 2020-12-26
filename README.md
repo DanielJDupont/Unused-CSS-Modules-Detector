@@ -1,5 +1,9 @@
 # Unused SCSS Modules Detector
 
+The motivation behind this program is due to the very messay nature of refactoring large `.tsx` and `.scss` files into a series of smaller hierarchical components.
+
+Never leave behind unused and confusing code again and work faster and more confidently to refactor code for better maintainability for your future self.
+
 ### What Does This Do?
 
 - Checks all pairs of `.tsx` and `.module.scss` files for any missing or unused CSS between them and tells you what exactly is missing by reporting a list for each the `.tsx` and the `.module.scss` on what should not be in each file.
