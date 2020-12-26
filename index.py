@@ -19,23 +19,24 @@ for tuple_element in result:
 # For all of the walked .tsx files found.
 for item in found_tsx_files:
 
-    f_module_css = open(item[0:-4] + ".module.scss", "r")
+    f_module_scss = open(item[0:-4] + ".module.scss", "r")
     f_tsx = open(item, "r")
 
-    # Read in all CSS class names from .module.css.
-    # In the .module.css file, add all ".className {" to a list between the "." and " {" so just record "className"
+    # Read in all SCSS class names from .module.css.
+    # In the .module.scss file, add all ".className {" to a list between the "." and " {" so just record "className"
     module_css_classes = []
 
-    for line in f_module_css:
-        if line[0] == '.' and ":" not in line and ">" not in line and 'iframe' not in line:
+    for line in f_module_scss:
+        # Check if the header of the scss class contains anything that would mean it is not used in the .tsx file directly.
+        if line[0] == '.' and ":" not in line and ">" not in line and 'iframe' not in line and "@mixin" not in line:
             className = line[1:-3]
             module_css_classes.append(className)
 
-    f_module_css.close()
+    f_module_scss.close()
 
     # Read in all styles from .tsx.
     # In the .tsx file, add all "styles={className}" to a list between the "styles={" and "}" so just record "className"
-    tsx_css_classes = []
+    tsx_scss_classes = []
 
     for line in f_tsx:
         if "styles." in line:
@@ -57,30 +58,30 @@ for item in found_tsx_files:
             classNameIndexEnd = index
 
             className = line[classNameIndex: classNameIndexEnd]
-            tsx_css_classes.append(className)
+            tsx_scss_classes.append(className)
 
     f_tsx.close()
 
     # Convert the list of class names and styles into sets, which are lists with no duplicates.
     module_css_classes_set = set(module_css_classes)
-    tsx_css_classes_set = set(tsx_css_classes)
+    tsx_scss_classes_set = set(tsx_scss_classes)
 
     # Logic that separately checks which classNames or styles are not used in the .module.css and .tsx files respectively.
-    unused_module_css = []
+    unused_module_scss = []
     for className in module_css_classes_set:
-        if className not in tsx_css_classes_set:
-            unused_module_css.append(className)
+        if className not in tsx_scss_classes_set:
+            unused_module_scss.append(className)
 
     unused_tsx_styles = []
-    for className in tsx_css_classes_set:
+    for className in tsx_scss_classes_set:
         if className not in module_css_classes_set:
             unused_tsx_styles.append(className)
 
-    if len(unused_module_css) != 0 or len(unused_tsx_styles) != 0:
+    if len(unused_module_scss) != 0 or len(unused_tsx_styles) != 0:
         print("")
         print(item[len(sys.argv[1]):])
         print("Unused .module.scss:")
-        print(unused_module_css)
+        print(unused_module_scss)
         print("Unused in .tsx:")
         print(unused_tsx_styles)
 
