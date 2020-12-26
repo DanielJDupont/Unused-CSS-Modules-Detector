@@ -1,8 +1,12 @@
 # Unused SCSS Modules Detector
 
-### Next Feature:
+### Newest Feature:
 
 - I have found a love for nested pseudo-classes and @mixin with @include to cut down on duplicate css significantly and to improve its readability and maintainability. I don't really see a reason to use css without scss so all support for .css files has been removed and replaced with only supporting .scss files.
+
+### Next Feature:
+
+- The algorithm is not optimal, I believe that it may have a O(n^2) runtime complexity and it can be significantly improved upon but improved performance is not relevant as the input size is pretty well always intended to be small, as I deal with hundreds of pairs of files. For fun I may improve upon the algorithm at a later time and measure the difference in performance.
 
 
 ### What Does This Do?
