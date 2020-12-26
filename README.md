@@ -41,11 +41,11 @@ Tested on Python 3.7.6 with VS Code.
 
 1. In VS Code, simply right click the **folder** you want to investigate and copy the **full path**, not the relative path.
 
-2. Paste the **full path** as your first argument into the terminal while running the **index.py** file with **python**.
+2. Paste the **full path** as your first argument into the terminal while running the **index.py** file with **python**. Below is an example of myself providing the **full path** to the location I want to investigate on my own file system while also having the current folder for this program open in the terminal. Your full path will almost certainly be different from mine.
 
 `python index.py /home/dan/Desktop/Unused-CSS-Modules-Detector`
 
-3. Run the command and check out the results of what happens when you investigate the ExampleCoffeeCard.
+1. Run the command and check out the results of what happens when you investigate the ExampleCoffeeCard.
 
 
 
