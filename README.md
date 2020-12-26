@@ -1,14 +1,5 @@
 # Unused SCSS Modules Detector
 
-### Newest Feature:
-
-- I have found a love for nested pseudo-classes and @mixin with @include to cut down on duplicate css significantly and to improve its readability and maintainability. I don't really see a reason to use css without scss so all support for .css files has been removed and replaced with only supporting .scss files.
-
-### Next Feature:
-
-- The algorithm is not optimal, I believe that it may have a O(n^2) runtime complexity and it can be significantly improved upon but improved performance is not relevant as the input size is pretty well always intended to be small, as I deal with hundreds of pairs of files. For fun I may improve upon the algorithm at a later time and measure the difference in performance.
-
-
 ### What Does This Do?
 
 - Checks all pairs of `.tsx` and `.module.scss` files for any missing or unused CSS between them and tells you what exactly is missing by reporting a list for each the `.tsx` and the `.module.scss` on what should not be in each file.
@@ -18,8 +9,6 @@
 ### Who Uses It?
 
 This is primarily used by Interview Py to help enforce a specific file-folder structure and to check for any unused CSS.
-
-
 
 ### How to Use:
 
