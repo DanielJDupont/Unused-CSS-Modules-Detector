@@ -7,10 +7,9 @@
 
 ### What Does This Do?
 
-- Checks all pairs of `.tsx` and `.module.scss` files for any missing or unused CSS between them and tells you what exactly is missing or unused.
-- Checks the provided folder and all subfolders.
-- Tells you if any `.tsx` file is missing its corresponding `.module.scss` file.
-- Informs you if there is any difference in the spelling of the `.tsx` and its corresponding `.module.scss` file.
+- Checks all pairs of `.tsx` and `.module.scss` files for any missing or unused CSS between them and tells you what exactly is missing by reporting a list for each the `.tsx` and the `.module.scss` on what should not be in each file.
+- Checks the provided folder and all subfolders using the Python OS API.
+- Tells you if any `.tsx` file doesn't have or is spelled incorrectly compared to its corresponding `.module.scss` file through FileNotFoundError messages.
 
 ### Who Uses It?
 
