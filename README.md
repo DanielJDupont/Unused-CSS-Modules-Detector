@@ -45,7 +45,7 @@ Tested on Python 3.7.6 with VS Code.
 
 `python index.py /home/dan/Desktop/Unused-CSS-Modules-Detector`
 
-1. Run the command and check out the results of what happens when you investigate the ExampleCoffeeCard.
+3. Run the command and check out the results of what happens when you investigate the ExampleCoffeeCard.
 
 
 
