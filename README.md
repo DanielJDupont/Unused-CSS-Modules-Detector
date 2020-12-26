@@ -35,18 +35,25 @@ Writing all of your own CSS can quickly fall into an unmaintainable mess of dupl
 The pattern of `.tsx` components always being paired with a `.module.scss` file also makes it far more clear when a `.ts` file or some other file is present.
 
 
-### How to Use
+### How to Use:
 
 Tested on Python 3.7.6 with VS Code.
 
-1. In VS Code, simply right click the **folder** you want to check and copy the **full path**, not the relative path.
+1. In VS Code, simply right click the **folder** you want to investigate and copy the **full path**, not the relative path.
 
 2. Paste the **full path** as your first argument into the terminal while running the **index.py** file with **python**.
-`python index.py /home/dan/Desktop/interview_py/components`
+
+`python index.py /home/dan/Desktop/Unused-CSS-Modules-Detector`
+
+3. Run the command and check out the results of what happens when you investigate the ExampleCoffeeCard.
+
+
+
+
 
 *Note that you will need to have Python installed and able to execute .py files from your terminal with this approach. Python environments can be easily changed using the bottom left of VS Code.*
 
-### Other Notes
+### Other Notes:
 
 All `.tsx` and `.module.scss` files will be automatically checked within the folder full path you provide, as well as inside all nested folders. This is achieved with Python's `os.walk`.
 
@@ -56,7 +63,7 @@ All `.tsx` and `.module.scss` files will be automatically checked within the fol
 - `index.module.scss index.tsx`
 
 
-### More Examples of How to Use the Command
+### More Examples of How to Use the Command:
 
 `python index.py /home/dan/Desktop/interview_py/components`
 
