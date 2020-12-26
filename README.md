@@ -22,18 +22,21 @@ Tested on Python 3.7.6 with VS Code.
 
 3. Run the command and check out the results of what happens when you investigate the ExampleCoffeeCard.
 
-
-
 *Note that you will need to have Python installed and able to execute .py files from your terminal with this approach. Python environments can be easily changed using the bottom left of VS Code.*
 
 ### Other Notes:
 
 All `.tsx` and `.module.scss` files will be automatically checked within the folder full path you provide, as well as inside all nested folders. This is achieved with Python's `os.walk`.
 
-*Note that the `.module.scss` file and the `.tsx` file must be named identically for the check between them to occur properly, for example:*
+*Note that the `.module.scss` file and the `.tsx` file must be named identically for the check between them to occur properly, otherwise a FileNotFound error will be displayed meaning that you need to correct the spelling of the indicated file pair. Valid pair examples:*
 - `File.module.scss File.tsx`
 - `Profile.module.scss Profile.tsx`
 - `index.module.scss index.tsx`
+
+*Examples of invalid pairs:*
+- `ExampleCard.css ExampleCard.tsx`
+- `CardColumn.scss CardColumn.ts`
+- `UserNoteCard.scss userNoteCard.tsx`
 
 
 ### More Examples of How to Use the Command:
