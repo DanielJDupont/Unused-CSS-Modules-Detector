@@ -1,8 +1,8 @@
 # Unused SCSS Modules Detector
 
-The motivation behind this program is due to the very messay nature of refactoring large `.tsx` and `.scss` files into a series of smaller hierarchical components.
+The motivation for creating this program is to solve the very messy nature of refactoring large `.tsx` and `.scss` files into a series of smaller hierarchical components.
 
-Never leave behind unused and confusing code again and work faster and more confidently to refactor code for better maintainability for your future self.
+Never leave behind unused and confusing code again. Work faster and more confidently to refactor code for better maintainability for your future self.
 
 ### What Does This Do?
 
