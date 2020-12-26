@@ -39,7 +39,7 @@ Tested on Python 3.7.6 with VS Code.
 1. In VS Code, simply right click the **folder** you want to check and copy the **full path**, not the relative path.
 
 2. Paste the **full path** as your first argument into the terminal while running the **index.py** file with **python**.
-`python index.py /home/dan/Desktop/Unused-CSS-Module-Detector/`
+`python index.py /home/dan/Desktop/interview_py/components`
 
 *Note that you will need to have Python installed and able to execute .py files from your terminal with this approach. Python environments can be easily changed using the bottom left of VS Code.*
 
