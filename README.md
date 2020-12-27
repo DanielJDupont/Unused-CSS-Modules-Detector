@@ -4,6 +4,14 @@ The motivation for creating this program is to solve the very messy nature of re
 
 Never leave behind unused and confusing code again. Work faster and more confidently to refactor code for better maintainability for your future self.
 
+
+### Errors to Fix:
+
+Note that styles that appear in the second portion (or false part or `:` part) of ternary operators in `.tsx` files are not being recognized properly and are claimed to be unused in the `.scss` file. For example the statement: `isActive ? styles.activeButton : styles.button` will appear as .button not being used in the `.scss` file, which is obviously not correct.
+
+The parser I wrote to check each line obviously only looks for one style per line in `.tsx` files instead of multiple styles on one line as it should.
+
+
 ### What Does This Do?
 
 - Checks all pairs of `.tsx` and `.module.scss` files for any missing or unused CSS between them and tells you what exactly is missing by reporting a list for each the `.tsx` and the `.module.scss` on what should not be in each file.
